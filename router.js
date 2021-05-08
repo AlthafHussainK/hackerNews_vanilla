@@ -14,10 +14,10 @@ export default class RouterHandler {
       { path: '/ask', page: Stories },
       { path: '/show', page: Stories }
     ];
-    
-    routes.forEach(route => {
-      router.on(route.path, () => {
-        route.page(route.path);
+
+    routes.forEach(({ path, page}) => {
+      router.on(path, () => {
+        page(path);
       }).resolve(); 
     })
   }
