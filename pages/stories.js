@@ -3,8 +3,11 @@ import view from '../utils/view.js'
 export default async function Stories(path) {
   const stories = await getStories(path)
   console.log(stories)
+  const hasStories = stories.length > 0
 
-  view.innerHTML = `<div>${path}</div>`;
+  view.innerHTML = `<div>
+    ${hasStories ? stories.map(story => JSON.stringify(story)) : 'No stories'}
+  </div>`;
 }
 
 async function getStories(path) {
