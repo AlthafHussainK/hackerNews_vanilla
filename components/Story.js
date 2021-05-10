@@ -12,7 +12,7 @@ export default function Story(story) {
         <div class="gray">
           ${story.points} points by ${story.user} ${story.time_ago}
           |
-          <a href="#item?id=${story.id}">
+          <a href="#/item?id=${story.id}">
             ${story.comments_count} comments
           </a>
           |
