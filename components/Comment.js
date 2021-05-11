@@ -10,4 +10,4 @@ export default function Comment(comment) {
       ${hasNestedComments ? comment.comments.map(comment => Comment(comment)).join('') : "" }
     </div>
   `
-}
+} 
