@@ -180,15 +180,15 @@ textarea {
   font-weight: bold;
 }
 
-.app-container {
-  width: 85%;
+#app-container {
+  width: 95%;
   margin-right: auto;
   margin-left: auto;
 }
 
 #route-container {
   background-color: rgb(246, 246, 239);
-  padding: .5em, 1.2em;
+  padding: .5em 1.2em;
 }
 
 .comment-header {
