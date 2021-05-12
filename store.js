@@ -21,19 +21,17 @@ function favoritesReducer(state = initialState, action ) {
       return { favorites }
     }
     case "REMOVE_FAVORITE": {
-      const removedFavorite = action.payload.favorite
-      const favorites = state.favorites.filter(favorite => favorite.id !== removedFavorite.id)
-      return { favorites }
+      const removedFavorite = action.payload.favorite;
+      const favorites = state.favorites.filter(favorite => favorite.id !== removedFavorite.id);
+      return { favorites };
     }
     default:
       return state
   }
 }
 
-const action = { type: "ADD_FAVORITE", payload: { favorite: { title: "story1", id: 1 } } }
-
 const store = createStore(favoritesReducer)
-store.dispatch(action)
-console.log(store.getState()) 
+// store.dispatch(action)
+
 
 export default store
