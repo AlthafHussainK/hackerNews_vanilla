@@ -32,7 +32,6 @@ export default async function Item() {
 
 async function getStory() {
   const storyId = window.location.hash.split('?id=')[1]
-  console.log(storyId)
   const response = await fetch(`${baseUrl}/item/${storyId}`)
   const story = await response.json()
   return story
